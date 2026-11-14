@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Little Princess ♡</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: #80516b;
+  background: linear-gradient(135deg,#fff0f6,#fce4f0,#f1e7ff);
+  overflow-x: hidden;
+  text-align: center;
+}
+
+header {
+  padding: 75px 15px 35px;
+}
+
+h1 {
+  font-size: clamp(38px,7vw,65px);
+  color: #d66d9c;
+  margin: 20px 0;
+}
+
+h2 {
+  color: #d66d9c;
+  margin-bottom: 22px;
+  font-size: 30px;
+}
+
+p {
+  line-height: 1.9;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.card {
+  background: rgba(255,255,255,.8);
+  width: min(850px,90%);
+  margin: 25px auto;
+  padding: 35px 25px;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px #d98eaf25;
+  border: 1px solid #f7d1e1;
+}
+
+button {
+  background: #e78db3;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 12px;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.06);
+  background: #d66d9c;
+}
+
+#letter {
+  display: none;
+  text-align: left;
+  line-height: 2;
+  font-size: 17px;
+  margin-top: 25px;
+}
+
+.section {
+  padding: 35px 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.reason {
+  background: #fff3f8;
+  padding: 22px;
+  border-radius: 18px;
+  line-height: 1.8;
+}
+
+.reason span {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.teddy {
+  font-size: 85px;
+  margin: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(-12px); }
+}
+
+.hearts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px;
+}
+
+.heart {
+  font-size: 35px;
+  background: #fff0f6;
+  color: #e78db3;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  padding: 0;
+}
+
+.heart.collected {
+  background: #f9c6dc;
+  color: #d64d85;
+}
+
+.final {
+  padding: 65px 15px;
+}
+
+.final-message {
+  display: none;
+  margin: 25px auto;
+  font-size: 21px;
+  line-height: 1.9;
+  color: #c35e8d;
+  max-width: 650px;
+}
+
+footer {
+  padding: 30px;
+  font-size: 13px;
+}
+
+.float {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: float 6s linear forwards;
+  z-index: 10;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+.flower {
+  font-size: 27px;
+  margin: 15px;
+}
+
+.promise {
+  font-size: 18px;
+  line-height: 2;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="flower">🌷 🦋 🌸 🦋 🌷</div>
+  <p> A LITTLE WORLD MADE JUST FOR YOU </p>
+  <h1>My Little Princess ♡</h1>
+  <p class="subtitle">
+    My cutie pie, my everything, my forever person.
+  </p>
+  <div class="teddy">🧸</div>
+  <p>Someone has a very special message for you...</p>
+  <button onclick="openLetter()">Open your love letter 💌</button>
+</header>
+
+<div class="card" id="letter">
+  <h2>To My Sweetest Princess 💗</h2>
+
+  <p>My Little Princess,</p>
+
+  <p>
+    First of all, I want you to know that you are one of
+    the most beautiful things that has ever happened to me.
+    I honestly don't think words will ever be enough to
+    explain how special you are to my heart.
+  </p>
+
+  <p>
+    You are my favourite notification, my favourite person,
+    my sweetest thought and the reason behind so many of
+    my smiles. Even the smallest things about you make me
+    fall for you a little more.
+  </p>
+
+  <p>
+    I don't want you to ever doubt how precious you are.
+    You don't have to be perfect, you don't have to pretend
+    to be happy all the time, and you don't have to hide
+    your difficult days from me.
+  </p>
+
+  <p>
+    I want to be there for your happy moments and your
+    difficult ones. I want to listen to your endless stories,
+    laugh with you over silly things, comfort you when
+    you're sad and celebrate every achievement of yours.
+  </p>
+
+  <p>
+    And princess, there's something I want you to know.
+    I don't just imagine you in my present. I imagine you
+    in my future too.
+  </p>
+
+  <p>
+    I dream about growing old with you, building a beautiful
+    home together, waking up beside you, annoying you every
+    single day and loving you through every chapter of life.
+  </p>
+
+  <p>
+    I genuinely want to marry you one day.
+    Not just as a cute thought, but as a beautiful dream
+    I sincerely hope we get to turn into reality.
+  </p>
+
+  <p>
+    Until that day comes, I'll keep choosing you,
+    appreciating you, learning you and loving you.
+    I want us to grow together, communicate, understand
+    each other and create a love we're both proud of.
+  </p>
+
+  <p>
+    Thank you for being my Little Princess.
+    Thank you for being you.
+    I'm so blessed to have you in my life.
+  </p>
+
+  <p style="text-align:right;color:#d66d9c">
+    With all my love,<br>
+    Your future husband (hopefully hehe) ♡
+  </p>
+</div>
+
+<section class="section">
+  <h2>Why You're So Special 🌸</h2>
+  <p>Let me remind you of a few things I adore about you.</p>
+
+  <div class="grid">
+    <div class="reason">
+      <span>💗</span>
+      <b>Your beautiful heart</b>
+      <p>The person you are makes you incredibly special.</p>
+    </div>
+
+    <div class="reason">
+      <span>🌷</span>
+      <b>Your smile</b>
+      <p>One smile from you can make my entire day.</p>
+    </div>
+
+    <div class="reason">
+      <span>🧸</span>
+      <b>Your little habits</b>
+      <p>All those tiny things that make you uniquely you.</p>
+    </div>
+
+    <div class="reason">
+      <span>🦋</span>
+      <b>Your existence</b>
+      <p>Simply having you in my life means so much.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>A Promise To My Princess 💍</h2>
+    <p class="promise">
+      I promise to keep choosing you with love, honesty,
+      patience and respect. I want to understand you,
+      support your dreams, celebrate your victories and
+      stand beside you when life gets difficult.
+      <br><br>
+      I cannot promise that every day will be perfect,
+      but I promise that I want to keep working towards
+      a beautiful future with you.
+      <br><br>
+      One day, I hope I get to call you my wife.
+      Until then, you're my favourite dream. ❤️
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Collect Your Love Hearts ❤️</h2>
+  <p>Tap all five hearts to unlock a little surprise!</p>
+
+  <div class="hearts">
+    <button class="heart" onclick="collect(this)">♡</button>
+    <button class="heart" onclick="collect(this)">♡</button>
+    <button class="heart" onclick="collect(this)">♡</button>
+    <button class="heart" onclick="collect(this)">♡</button>
+    <button class="heart" onclick="collect(this)">♡</button>
+  </div>
+
+  <p id="count">0 / 5 hearts collected</p>
+  <p id="complete"></p>
+</section>
+
+<section class="final">
+  <div class="teddy">🧸💗</div>
+  <h2>One Last Surprise, Princess!</h2>
+
+  <button onclick="showFinal()">
+    Open your final surprise 🎁
+  </button>
+
+  <div class="final-message" id="finalMessage">
+    My Little Princess...
+
+    <br><br>
+
+    One day, I don't want to send you a link
+    to read how much I love you.
+
+    I want to wake up beside you,
+    hold your hand, look into your eyes
+    and remind you every morning that
+    you're my forever.
+
+    <br><br>
+
+    I want to call you my wife.
+    I want to build a home with you.
+    I want a lifetime of little moments with you.
+
+    <br><br>
+
+    Until then, remember that somewhere,
+    there's a boy dreaming about a future
+    with his favourite girl.
+
+    <br><br>
+
+    I LOVE YOU, MY LITTLE PRINCESS. ❤️
+
+    <br><br>
+
+    Forever yours. ♡
+  </div>
+</section>
+
+<footer>
+  MADE WITH ENDLESS LOVE FOR MY LITTLE PRINCESS ♡
+  <br><br>
+  🌷 🦋 🌸 🧸 🌸 🦋 🌷
+</footer>
+
+<script>
+
+let collected = 0;
+
+function openLetter() {
+  document.getElementById("letter").style.display = "block";
+  document.getElementById("letter").scrollIntoView({
+    behavior: "smooth"
+  });
+  for(let i=0;i<10;i++){
+    setTimeout(floatHeart,i*150);
+  }
+}
+
+function collect(button) {
+  if(button.classList.contains("collected")) return;
+
+  button.classList.add("collected");
+  button.innerHTML = "♥";
+  collected++;
+
+  document.getElementById("count").innerHTML =
+    collected + " / 5 hearts collected";
+
+  floatHeart();
+
+  if(collected === 5) {
+    document.getElementById("complete").innerHTML =
+      "You collected all the hearts... just like you collected mine! 💗";
+  }
+}
+
+function showFinal() {
+  document.getElementById("finalMessage").style.display = "block";
+  document.getElementById("finalMessage").scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+  for(let i=0;i<20;i++){
+    setTimeout(floatHeart,i*100);
+  }
+}
+
+function floatHeart() {
+  const heart = document.createElement("div");
+
+  heart.className = "float";
+  heart.innerHTML = ["💗","🌸","🦋","💕","🌷"][
+    Math.floor(Math.random()*5)
+  ];
+
+  heart.style.left = Math.random()*95 + "vw";
+  heart.style.fontSize = "25px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(),6000);
+}
+
+setInterval(() => {
+  if(Math.random() > .6) floatHeart();
+},2500);
+
+</script>
+
+</body>
+</html>
