@@ -3,73 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Little Letter for My Princess 💗</title>
+<meta name="theme-color" content="#fff0f5">
+<title>To My Princess ♡</title>
 <style>
-:root{--pink:#f7cfe0;--rose:#c66d91;--ink:#68495b;--cream:#fff9fc}
+:root{--pink:#f5b8cc;--rose:#c85e82;--ink:#654454;--cream:#fff9f8}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:linear-gradient(135deg,#fff1f7,#f1eaff 55%,#fff8ed);overflow-x:hidden}
-.float{position:fixed;z-index:0;pointer-events:none;animation:drift 12s linear infinite;opacity:.65;font-size:20px}
-@keyframes drift{from{transform:translateY(110vh) rotate(0)}to{transform:translateY(-15vh) rotate(360deg)}}
-main{position:relative;z-index:1;width:min(92%,720px);margin:7vh auto;padding:28px 22px 42px;text-align:center}
-.tag{letter-spacing:3px;text-transform:uppercase;font:11px Arial,sans-serif;color:#b16d8c}
-h1{font-size:clamp(2.2rem,7vw,4rem);font-weight:normal;margin:14px 0 8px;color:#a65379}
-.sub{font-size:1.08rem;line-height:1.7;margin:0 auto 28px;max-width:520px}
-.envelope{margin:28px auto 18px;width:min(310px,85vw);height:190px;position:relative;cursor:pointer;filter:drop-shadow(0 12px 16px #b77b9830);transition:.25s}
-.envelope:hover{transform:translateY(-5px)}
-.env-base{position:absolute;inset:0;background:#f3b8d0;border-radius:12px;overflow:hidden}
-.env-base:before,.env-base:after{content:"";position:absolute;bottom:0;width:0;height:0;border-left:155px solid transparent;border-right:155px solid transparent}
-.env-base:before{border-bottom:125px solid #e99fbe;z-index:2}
-.env-base:after{border-top:105px solid transparent;border-right:155px solid #f8c9dc;border-left:155px solid #f8c9dc;z-index:1}
-.flap{position:absolute;top:0;left:0;width:0;height:0;border-left:155px solid transparent;border-right:155px solid transparent;border-top:112px solid #f8d3e2;transform-origin:top;transition:transform .7s;z-index:4}
-.seal{position:absolute;z-index:5;top:75px;left:calc(50% - 22px);font-size:42px;transition:.3s}
-.envelope.open .flap{transform:rotateX(180deg);z-index:0}
-.envelope.open .seal{opacity:0;transform:scale(.5)}
-.hint{font:13px Arial,sans-serif;color:#a66c87}
-.letter{display:none;text-align:left;background:#fffdfd;border:1px solid #f4d9e5;border-radius:20px;padding:clamp(22px,5vw,42px);box-shadow:0 18px 50px #9b66851a;margin:28px auto 0;line-height:1.9;font-size:1.05rem}
-.letter.show{display:block;animation:appear .8s ease}
-@keyframes appear{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.letter h2{text-align:center;color:#b45f85;font-weight:normal;font-size:1.8rem}
-.signature{text-align:right;color:#b45f85;font-style:italic;margin-top:25px}
-button{border:0;border-radius:30px;padding:13px 23px;background:#d987aa;color:white;font-size:15px;cursor:pointer;margin:14px 5px;box-shadow:0 6px 15px #d987aa35}
-button:hover{background:#bd6e93}
-.surprise{display:none;margin-top:22px;text-align:center;background:#fff1f7;border-radius:16px;padding:20px;line-height:1.7}
+body{margin:0;min-height:100vh;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:radial-gradient(circle at 15% 15%,#fff 0 7%,transparent 25%),linear-gradient(135deg,#fff4f6,#fce4ed 55%,#fff8ef);overflow-x:hidden}
+.float{position:fixed;pointer-events:none;opacity:.48;animation:drift 12s linear infinite;font-size:22px}
+@keyframes drift{from{transform:translateY(110vh) rotate(0)}to{transform:translateY(-15vh) rotate(35deg)}}
+main{width:min(720px,92%);margin:0 auto;padding:55px 0 42px;text-align:center;position:relative;z-index:1}
+.kicker{letter-spacing:4px;text-transform:uppercase;font:11px Arial,sans-serif;color:#b76c86}
+h1{font-size:clamp(36px,8vw,60px);font-weight:normal;margin:14px 0 10px;color:#a94f70}
+.subtitle{font-style:italic;color:#966b7b;font-size:18px;margin-bottom:35px}
+.envelope-wrap{margin:0 auto 28px;width:min(330px,85vw);height:220px;position:relative;cursor:pointer;filter:drop-shadow(0 14px 20px #c77b9633)}
+.envelope{position:absolute;inset:30px 0 0;background:#f5c7d6;border-radius:8px;overflow:hidden}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49.5%,#e8a9bf 50%),linear-gradient(215deg,transparent 49.5%,#f0b9cb 50%);z-index:2}
+.flap{position:absolute;top:30px;left:0;width:0;height:0;border-left:165px solid transparent;border-right:165px solid transparent;border-top:115px solid #e9a9bf;transform-origin:top;transition:transform .8s;z-index:4}
+.seal{position:absolute;z-index:5;top:104px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;background:#c85e82;color:white;display:grid;place-items:center;font-size:24px;box-shadow:0 3px 8px #a94f7055;transition:opacity .3s}
+.letter-peek{position:absolute;left:8%;top:0;width:84%;height:170px;background:#fffdfb;border-radius:5px;transition:transform .8s;display:grid;place-items:center;color:#b45c7b;font-size:22px;font-style:italic}
+.envelope-wrap.open .flap{transform:rotateX(180deg);z-index:1}
+.envelope-wrap.open .letter-peek{transform:translateY(-72px)}
+.envelope-wrap.open .seal{opacity:0}
+.hint{font:12px Arial,sans-serif;color:#a77889;letter-spacing:1px}
+.letter{display:none;text-align:left;background:#fffdfb;border:1px solid #f3d6df;border-radius:18px;padding:clamp(23px,5vw,43px);box-shadow:0 15px 45px #b76c861a;line-height:1.85;font-size:17px;margin-top:28px;animation:appear .9s ease}
+.letter.show{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.letter p{margin:0 0 17px}
+.salutation{font-size:25px;color:#b45175;font-style:italic}
+.promise{margin:26px 0;padding:20px;border-left:3px solid #e7a4bb;background:#fff3f6;border-radius:0 12px 12px 0;font-style:italic;color:#914d68}
+.signature{margin-top:28px;text-align:right;color:#b45175;font-style:italic;font-size:21px}
+.surprise{display:none;text-align:center;margin-top:25px;padding:24px 14px;border-radius:16px;background:#fff1f5;color:#a94f70}
 .surprise.show{display:block;animation:appear .7s ease}
-footer{font:12px Arial,sans-serif;color:#a77c91;margin-top:32px}
+.surprise strong{font-size:24px;font-weight:normal}
+button{border:0;border-radius:30px;padding:13px 25px;background:#c85e82;color:white;font:14px Arial,sans-serif;letter-spacing:.5px;cursor:pointer;box-shadow:0 6px 16px #c85e8233;transition:transform .2s,background .2s}
+button:hover{transform:translateY(-2px);background:#ad4d70}
+.action{margin:24px 0 0}
+footer{margin-top:36px;color:#b08091;font:11px Arial,sans-serif;letter-spacing:2px}
+@media(max-width:480px){main{padding-top:40px}.letter{font-size:16px}.envelope-wrap{height:205px}.flap{border-left-width:42.5vw;border-right-width:42.5vw}}
 </style>
 </head>
 <body>
-<script>
-const decorations=['♡','🦋','🌸','✿','💗'];
-for(let i=0;i<22;i++){let e=document.createElement('span');e.className='float';e.textContent=decorations[i%decorations.length];e.style.left=Math.random()*100+'vw';e.style.animationDuration=(9+Math.random()*12)+'s';e.style.animationDelay=(-Math.random()*18)+'s';e.style.fontSize=(14+Math.random()*17)+'px';document.body.appendChild(e)}
-</script>
+<div class="float" style="left:7%;animation-delay:-2s">♡</div><div class="float" style="left:23%;animation-delay:-8s">🌸</div><div class="float" style="left:77%;animation-delay:-5s">♡</div><div class="float" style="left:91%;animation-delay:-10s">✿</div>
 <main>
-  <div class="tag">made with all my love · just for you</div>
-  <h1>For my little princess 💗</h1>
-  <p class="sub">I know you're sleeping right now, my sleepyhead. So I made you a tiny corner of the internet to wake up to. No rush, sweetheart. Open it whenever you wake up. 🌙</p>
-  <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open your letter" onclick="openLetter()" onkeydown="if(event.key==='Enter'||event.key===' '){openLetter()}">
-    <div class="env-base"></div><div class="flap"></div><div class="seal">💌</div>
+  <div class="kicker">A little promise, from my heart</div>
+  <h1>To My Princess ♡</h1>
+  <div class="subtitle">For the girl I want beside me, today and always.</div>
+  <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Open your letter">
+    <div class="letter-peek">A letter for you ♡</div>
+    <div class="envelope"></div><div class="flap"></div><div class="seal">♡</div>
   </div>
-  <div class="hint" id="hint">tap the little envelope to open your letter</div>
-  <section class="letter" id="letter">
-    <h2>My sweetest princess,</h2>
-    <p>While you're sleeping peacefully, I just wanted to leave a little reminder here for you: you are loved, appreciated, and so incredibly special to me.</p>
-    <p>I hope you wake up feeling rested, calm, and smiling. I wish I could be right there to give you the warmest hug, gently brush your hair away, and tell you how precious you are. Until I can, let this little letter do the hugging for me. 🫂</p>
-    <p>You make ordinary moments feel beautiful just by being part of them. Your smile, your little ways, your presence, and all the things that make you <em>you</em> mean more to me than I could ever fit into one letter.</p>
-    <p>Please remember that you never have to be perfect to be loved. On your happiest days and your difficult ones, you deserve kindness, patience, comfort, and love. I hope I can keep giving you those things, one day at a time.</p>
-    <p>So sleep well, my little princess. Take your time waking up, have something nice to eat, and don't forget to smile. Somewhere, someone is very lucky to have you in his life — and that someone is me. 💗</p>
-    <p class="signature">All my love, always yours. 💞</p>
-    <div style="text-align:center"><button onclick="showSurprise()">one last little surprise ✨</button></div>
-    <div class="surprise" id="surprise">
-      <div style="font-size:38px">🧸💗🦋</div>
-      <strong>Good morning, my sleepy princess!</strong><br>
-      Here's your virtual hug. Hold it for as long as you need. I hope today is gentle with you, and I hope you always remember how much you mean to me. <br><span style="font-size:24px">♡ ♡ ♡</span>
-    </div>
-  </section>
-  <footer> a little love note, made just for you 🌷</footer>
+  <div class="hint" id="hint">TAP THE ENVELOPE TO OPEN YOUR LETTER</div>
+  <article class="letter" id="letter">
+    <p class="salutation">My sweetest Princess,</p>
+    <p>I wish I could be right beside you while you read this, holding your hands and looking into your eyes. But until I can do that, I hope these words make you feel even a little of the love I carry for you.</p>
+    <p>There is one thing I want you to know, and I never want you to doubt it: <strong>I am not planning a life where I simply walk away from you.</strong> I want to keep choosing you, keep learning you, keep growing with you, and keep finding reasons to fall in love with you all over again.</p>
+    <p>I know life won't always be perfect. We may have difficult days, misunderstandings, distance, and moments when things feel hard. But I don't want us to give up on each other just because a day is difficult. I want us to talk, understand, forgive, and face those days together. I want to be someone who makes you feel safe, heard, respected, and loved.</p>
+    <div class="promise">And one day, my love, I want to stand in front of you, hold your hands, and ask you to be mine forever. I want to marry you. Not just as a sweet dream or a pretty sentence, but as a future I genuinely hope and intend to build with you—one honest step at a time. 💍</div>
+    <p>I can't promise that every day will be easy, but I can promise to keep putting love, effort, patience, and honesty into us. I want to celebrate your happiest moments, comfort you on your hardest days, and make ordinary little moments beautiful simply because I get to share them with you.</p>
+    <p>So whenever you feel unsure, come back to this letter and remember: you are not someone I want only for a little while. You are the person I hope to build a home, a thousand memories, and a lifetime of tomorrows with.</p>
+    <p>Thank you for being my princess, my favourite person, and such a beautiful part of my life. I love you more than these words can ever explain.</p>
+    <div class="signature">Forever hoping for our forever,<br>Your boy ♡</div>
+    <div class="action"><button id="surpriseBtn">One more little promise…</button></div>
+    <div class="surprise" id="surprise"><strong>My future wife. 💍</strong><p style="margin:10px 0 0">I hope one day I get to read this beside you, in the home we built together. Until then, let's keep choosing each other. I love you, Princess. ♡</p></div>
+  </article>
+  <footer>MADE WITH ALL MY LOVE · JUST FOR YOU ♡</footer>
 </main>
 <script>
-function openLetter(){document.getElementById('envelope').classList.add('open');document.getElementById('letter').classList.add('show');document.getElementById('hint').textContent='a little piece of my heart, just for you';}
-function showSurprise(){document.getElementById('surprise').classList.add('show');}
+const env=document.getElementById('envelope'), letter=document.getElementById('letter'), hint=document.getElementById('hint');
+function openLetter(){env.classList.add('open');letter.classList.add('show');hint.textContent='A LITTLE PIECE OF MY HEART, JUST FOR YOU ♡';setTimeout(()=>letter.scrollIntoView({behavior:'smooth',block:'start'}),450)}
+env.addEventListener('click',openLetter);
+env.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter()}});
+document.getElementById('surpriseBtn').addEventListener('click',()=>{document.getElementById('surprise').classList.add('show');document.getElementById('surpriseBtn').textContent='I mean every word ♡';});
 </script>
 </body>
 </html>
