@@ -2,78 +2,277 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#fff0f5">
-<title>To My Princess ♡</title>
+<meta name="description" content="A little world made with love, just for My Little Princess.">
+<title>For My Little Princess 💗</title>
 <style>
-:root{--pink:#f5b8cc;--rose:#c85e82;--ink:#654454;--cream:#fff9f8}
+:root{--pink:#f7a9c4;--rose:#e879a0;--deep:#9e4568;--cream:#fffaf7;--ink:#674454;--soft:#ffe3ed;--lav:#f0e5ff}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:radial-gradient(circle at 15% 15%,#fff 0 7%,transparent 25%),linear-gradient(135deg,#fff4f6,#fce4ed 55%,#fff8ef);overflow-x:hidden}
-.float{position:fixed;pointer-events:none;opacity:.48;animation:drift 12s linear infinite;font-size:22px}
-@keyframes drift{from{transform:translateY(110vh) rotate(0)}to{transform:translateY(-15vh) rotate(35deg)}}
-main{width:min(720px,92%);margin:0 auto;padding:55px 0 42px;text-align:center;position:relative;z-index:1}
-.kicker{letter-spacing:4px;text-transform:uppercase;font:11px Arial,sans-serif;color:#b76c86}
-h1{font-size:clamp(36px,8vw,60px);font-weight:normal;margin:14px 0 10px;color:#a94f70}
-.subtitle{font-style:italic;color:#966b7b;font-size:18px;margin-bottom:35px}
-.envelope-wrap{margin:0 auto 28px;width:min(330px,85vw);height:220px;position:relative;cursor:pointer;filter:drop-shadow(0 14px 20px #c77b9633)}
-.envelope{position:absolute;inset:30px 0 0;background:#f5c7d6;border-radius:8px;overflow:hidden}
-.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49.5%,#e8a9bf 50%),linear-gradient(215deg,transparent 49.5%,#f0b9cb 50%);z-index:2}
-.flap{position:absolute;top:30px;left:0;width:0;height:0;border-left:165px solid transparent;border-right:165px solid transparent;border-top:115px solid #e9a9bf;transform-origin:top;transition:transform .8s;z-index:4}
-.seal{position:absolute;z-index:5;top:104px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;background:#c85e82;color:white;display:grid;place-items:center;font-size:24px;box-shadow:0 3px 8px #a94f7055;transition:opacity .3s}
-.letter-peek{position:absolute;left:8%;top:0;width:84%;height:170px;background:#fffdfb;border-radius:5px;transition:transform .8s;display:grid;place-items:center;color:#b45c7b;font-size:22px;font-style:italic}
-.envelope-wrap.open .flap{transform:rotateX(180deg);z-index:1}
-.envelope-wrap.open .letter-peek{transform:translateY(-72px)}
-.envelope-wrap.open .seal{opacity:0}
-.hint{font:12px Arial,sans-serif;color:#a77889;letter-spacing:1px}
-.letter{display:none;text-align:left;background:#fffdfb;border:1px solid #f3d6df;border-radius:18px;padding:clamp(23px,5vw,43px);box-shadow:0 15px 45px #b76c861a;line-height:1.85;font-size:17px;margin-top:28px;animation:appear .9s ease}
-.letter.show{display:block}
-@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
-.letter p{margin:0 0 17px}
-.salutation{font-size:25px;color:#b45175;font-style:italic}
-.promise{margin:26px 0;padding:20px;border-left:3px solid #e7a4bb;background:#fff3f6;border-radius:0 12px 12px 0;font-style:italic;color:#914d68}
-.signature{margin-top:28px;text-align:right;color:#b45175;font-style:italic;font-size:21px}
-.surprise{display:none;text-align:center;margin-top:25px;padding:24px 14px;border-radius:16px;background:#fff1f5;color:#a94f70}
-.surprise.show{display:block;animation:appear .7s ease}
-.surprise strong{font-size:24px;font-weight:normal}
-button{border:0;border-radius:30px;padding:13px 25px;background:#c85e82;color:white;font:14px Arial,sans-serif;letter-spacing:.5px;cursor:pointer;box-shadow:0 6px 16px #c85e8233;transition:transform .2s,background .2s}
-button:hover{transform:translateY(-2px);background:#ad4d70}
-.action{margin:24px 0 0}
-footer{margin-top:36px;color:#b08091;font:11px Arial,sans-serif;letter-spacing:2px}
-@media(max-width:480px){main{padding-top:40px}.letter{font-size:16px}.envelope-wrap{height:205px}.flap{border-left-width:42.5vw;border-right-width:42.5vw}}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:linear-gradient(145deg,#fff8f8,#fff0f5 48%,#f9efff);min-height:100vh;overflow-x:hidden}
+button{font:inherit}
+.floaters{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.floater{position:absolute;bottom:-50px;opacity:.55;animation:rise linear infinite;color:#e98bad}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+main{position:relative;z-index:1;width:min(900px,92%);margin:auto;padding:28px 0 70px}
+.hero{text-align:center;padding:55px 18px 35px}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font:600 11px Arial,sans-serif;color:#c16d8c}
+h1{font-size:clamp(2.5rem,8vw,5rem);line-height:1.02;color:var(--deep);margin:15px 0}
+.subtitle{font-size:1.12rem;line-height:1.7;max-width:600px;margin:0 auto;color:#956477}
+.flower{font-size:2rem;letter-spacing:10px}
+.card{background:#ffffffc9;border:1px solid #f7d2df;border-radius:26px;box-shadow:0 18px 55px #b96b8c18;padding:clamp(22px,5vw,42px);margin:22px 0;backdrop-filter:blur(8px)}
+.section-title{text-align:center;color:var(--deep);font-size:clamp(1.8rem,5vw,2.6rem);margin:0 0 10px}
+.section-intro{text-align:center;line-height:1.7;color:#94687a;margin:0 auto 24px;max-width:620px}
+.envelope-wrap{display:grid;place-items:center;padding:18px 0 8px}
+.envelope{border:0;background:transparent;cursor:pointer;position:relative;width:min(270px,80vw);height:180px;filter:drop-shadow(0 12px 12px #b65c7b28);transition:transform .25s}
+.envelope:hover{transform:translateY(-5px) scale(1.02)}
+.env-back{position:absolute;inset:0;background:#f4a9c2;border-radius:12px}
+.env-front{position:absolute;inset:0;background:linear-gradient(145deg,#ffd9e5,#f6a9c4);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:12px}
+.env-flap{position:absolute;inset:0;background:#e98eae;clip-path:polygon(0 0,100% 0,50% 61%);transform-origin:top;transition:transform .7s;z-index:2;border-radius:10px}
+.envelope.open .env-flap{transform:rotateX(180deg)}
+.letter-icon{position:absolute;z-index:1;left:50%;top:25px;transform:translateX(-50%);font-size:3.5rem;transition:top .7s}
+.envelope.open .letter-icon{top:-35px}
+.seal{position:absolute;z-index:3;left:50%;top:68px;transform:translateX(-50%);font-size:2rem}
+.btn{border:0;border-radius:999px;background:linear-gradient(135deg,#e989ac,#d96f98);color:white;padding:14px 24px;cursor:pointer;box-shadow:0 8px 18px #d96f9833;transition:.2s;font:600 14px Arial,sans-serif}
+.btn:hover{transform:translateY(-2px);box-shadow:0 11px 22px #d96f9844}
+.btn.secondary{background:#fff;color:var(--deep);border:1px solid #f0bfd0;box-shadow:none}
+.center{text-align:center}
+.hidden{display:none!important}
+.letter-copy{font-size:1.08rem;line-height:1.95;white-space:normal}
+.signature{font-style:italic;color:var(--deep);font-size:1.35rem;margin-top:22px}
+.reason-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.reason{background:linear-gradient(135deg,#fff8fb,#fff);border:1px solid #f6d8e3;border-radius:17px;padding:17px 16px;min-height:112px;display:flex;gap:12px;align-items:flex-start;animation:pop .35s both}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.num{flex:0 0 30px;height:30px;border-radius:50%;background:#ffe1eb;color:#b85c7f;display:grid;place-items:center;font:700 12px Arial,sans-serif}
+.reason p{margin:2px 0 0;line-height:1.55;font-size:.98rem}
+.progress-shell{height:8px;background:#f8dce6;border-radius:99px;overflow:hidden;margin:18px 0 8px}
+.progress{height:100%;width:0;background:linear-gradient(90deg,#ef9fba,#d96f98);transition:width .3s}
+.progress-label{text-align:center;font:12px Arial,sans-serif;color:#a66a81}
+.promise-list{display:grid;gap:12px;max-width:650px;margin:25px auto 0}
+.promise{padding:15px 18px;border-radius:15px;background:#fff6fa;border:1px solid #f6dce6;line-height:1.6}
+.hug{font-size:5rem;animation:bob 2s ease-in-out infinite;display:inline-block}
+@keyframes bob{50%{transform:translateY(-9px) rotate(3deg)}}
+.heart-area{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:25px auto;max-width:500px}
+.heart{border:1px solid #f2c8d7;background:#fff5f9;border-radius:50%;width:58px;height:58px;font-size:1.6rem;cursor:pointer;transition:.2s}
+.heart:hover{transform:scale(1.12) rotate(-8deg);background:#ffe1eb}
+.message{min-height:58px;text-align:center;color:var(--deep);font-style:italic;line-height:1.6;margin:12px auto;max-width:580px}
+.final{background:linear-gradient(145deg,#fff0f5,#f7edff);text-align:center}
+.final h2{font-size:clamp(2rem,6vw,3.2rem);color:var(--deep);margin:8px 0 18px}
+.final p{font-size:1.08rem;line-height:1.9;max-width:650px;margin:12px auto}
+.footer{text-align:center;padding:30px 10px;color:#b17b91;font-size:.9rem}
+.small{font:12px Arial,sans-serif;color:#a77b8d;line-height:1.6}
+@media(max-width:600px){main{width:92%;padding-top:10px}.hero{padding:42px 8px 25px}.reason-grid{grid-template-columns:1fr}.reason{min-height:unset}.card{border-radius:21px;margin:15px 0}.letter-copy{font-size:1rem}.heart{width:53px;height:53px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
-<div class="float" style="left:7%;animation-delay:-2s">♡</div><div class="float" style="left:23%;animation-delay:-8s">🌸</div><div class="float" style="left:77%;animation-delay:-5s">♡</div><div class="float" style="left:91%;animation-delay:-10s">✿</div>
+<div class="floaters" id="floaters" aria-hidden="true"></div>
 <main>
-  <div class="kicker">A little promise, from my heart</div>
-  <h1>To My Princess ♡</h1>
-  <div class="subtitle">For the girl I want beside me, today and always.</div>
-  <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Open your letter">
-    <div class="letter-peek">A letter for you ♡</div>
-    <div class="envelope"></div><div class="flap"></div><div class="seal">♡</div>
-  </div>
-  <div class="hint" id="hint">TAP THE ENVELOPE TO OPEN YOUR LETTER</div>
-  <article class="letter" id="letter">
-    <p class="salutation">My sweetest Princess,</p>
-    <p>I wish I could be right beside you while you read this, holding your hands and looking into your eyes. But until I can do that, I hope these words make you feel even a little of the love I carry for you.</p>
-    <p>There is one thing I want you to know, and I never want you to doubt it: <strong>I am not planning a life where I simply walk away from you.</strong> I want to keep choosing you, keep learning you, keep growing with you, and keep finding reasons to fall in love with you all over again.</p>
-    <p>I know life won't always be perfect. We may have difficult days, misunderstandings, distance, and moments when things feel hard. But I don't want us to give up on each other just because a day is difficult. I want us to talk, understand, forgive, and face those days together. I want to be someone who makes you feel safe, heard, respected, and loved.</p>
-    <div class="promise">And one day, my love, I want to stand in front of you, hold your hands, and ask you to be mine forever. I want to marry you. Not just as a sweet dream or a pretty sentence, but as a future I genuinely hope and intend to build with you—one honest step at a time. 💍</div>
-    <p>I can't promise that every day will be easy, but I can promise to keep putting love, effort, patience, and honesty into us. I want to celebrate your happiest moments, comfort you on your hardest days, and make ordinary little moments beautiful simply because I get to share them with you.</p>
-    <p>So whenever you feel unsure, come back to this letter and remember: you are not someone I want only for a little while. You are the person I hope to build a home, a thousand memories, and a lifetime of tomorrows with.</p>
-    <p>Thank you for being my princess, my favourite person, and such a beautiful part of my life. I love you more than these words can ever explain.</p>
-    <div class="signature">Forever hoping for our forever,<br>Your boy ♡</div>
-    <div class="action"><button id="surpriseBtn">One more little promise…</button></div>
-    <div class="surprise" id="surprise"><strong>My future wife. 💍</strong><p style="margin:10px 0 0">I hope one day I get to read this beside you, in the home we built together. Until then, let's keep choosing each other. I love you, Princess. ♡</p></div>
-  </article>
-  <footer>MADE WITH ALL MY LOVE · JUST FOR YOU ♡</footer>
+  <header class="hero">
+    <div class="flower">🌷 🦋 🌸</div>
+    <div class="eyebrow">A little something, made with all my heart</div>
+    <h1>For My Little<br>Princess 💗</h1>
+    <p class="subtitle">A hundred little reasons, one very big love.<br>Take your time, sweetheart. Every word is for you.</p>
+  </header>
+
+  <section class="card center" id="opening">
+    <h2 class="section-title">A letter just for you</h2>
+    <p class="section-intro">There is something I have been wanting to tell you… and I put a little piece of my heart into this.</p>
+    <div class="envelope-wrap">
+      <button class="envelope" id="envelope" aria-label="Open your love letter">
+        <span class="env-back"></span><span class="letter-icon">💌</span><span class="env-flap"></span><span class="env-front"></span><span class="seal">💗</span>
+      </button>
+    </div>
+    <p class="small">Tap the envelope to open your surprise</p>
+    <button class="btn" id="openBtn">Open my letter 💌</button>
+  </section>
+
+  <section class="card hidden" id="letter">
+    <div class="flower center">🌸</div>
+    <h2 class="section-title">To my sweetest girl</h2>
+    <div class="letter-copy">
+      My Little Princess,
+
+      I wish I could put into words just how much you mean to me. Sometimes I look at you and wonder how I got so lucky to have someone like you in my life. You make my days softer, my smiles bigger, and my world a little more beautiful just by being in it.
+
+      I love you for the big things, of course, but I also love you for all the tiny things you might not even notice. The way you talk, the way you laugh, your little habits, your silly moments, your quiet moments, and all the things that make you wonderfully, unmistakably you.
+
+      I made this because I never want you to wonder whether you are special to me. You are. Not because you have to be perfect, not because you have to make every day magical, but simply because you are you. You deserve tenderness, patience, reassurance, laughter, and a love that keeps showing up.
+
+      So here are one hundred reasons why I love you. Some are sweet, some are silly, and some are the little things I carry in my heart. And even after all one hundred, I know I will keep finding more.
+    </div>
+    <div class="signature">With all my love, your boy ❤️</div>
+    <div class="center" style="margin-top:28px"><button class="btn" id="toReasons">Show me the 100 reasons 💗</button></div>
+  </section>
+
+  <section class="card hidden" id="reasons">
+    <h2 class="section-title">100 reasons why I love you</h2>
+    <p class="section-intro">One hundred little reminders that you are loved, appreciated, and cherished. And these are only the beginning.</p>
+    <div class="progress-shell"><div class="progress" id="progress"></div></div>
+    <div class="progress-label" id="progressLabel">0 of 100 reasons discovered</div>
+    <div class="center" style="margin:20px 0"><button class="btn" id="revealBtn">Reveal the reasons ✨</button></div>
+    <div class="reason-grid" id="reasonGrid"></div>
+    <div class="center" style="margin-top:28px"><button class="btn hidden" id="toPromises">A few promises for you 💍</button></div>
+  </section>
+
+  <section class="card hidden" id="promises">
+    <div class="center"><div class="hug">🧸</div></div>
+    <h2 class="section-title">My promises to you</h2>
+    <p class="section-intro">Not a promise that every day will be perfect, but promises about how I want to love you through every kind of day.</p>
+    <div class="promise-list">
+      <div class="promise">🤍 I promise to listen to you, even when finding the right words is difficult.</div>
+      <div class="promise">🌷 I promise to keep learning how to understand you, rather than assuming I already know everything.</div>
+      <div class="promise">🫶 I promise to make room for your feelings and respect your need for time and space.</div>
+      <div class="promise">✨ I promise to celebrate your little wins and stand beside you when things feel hard.</div>
+      <div class="promise">💗 I promise to keep choosing honesty, kindness, patience, and effort.</div>
+      <div class="promise">💍 I promise to work toward the future we dream about, and if life allows, I hope to marry you and build a home filled with love.</div>
+    </div>
+    <div class="center" style="margin-top:28px"><button class="btn" id="toHearts">A tiny collection of love 💞</button></div>
+  </section>
+
+  <section class="card hidden" id="heartsSection">
+    <h2 class="section-title">Pick a little heart</h2>
+    <p class="section-intro">Each heart is hiding a tiny message from me. Tap them all if you like. 💕</p>
+    <div class="heart-area" id="heartArea"></div>
+    <div class="message" id="heartMessage" aria-live="polite">Choose any heart, princess…</div>
+    <div class="center"><button class="btn" id="toFinal">One last thing, my love… 💌</button></div>
+  </section>
+
+  <section class="card final hidden" id="final">
+    <div class="flower">🌸 🦋 🌷</div>
+    <div style="font-size:3rem">💗</div>
+    <h2>My today, my tomorrow, my forever.</h2>
+    <p>My Little Princess, if I could give you one thing, it would be the ability to see yourself through my eyes for just a moment. Maybe then you would understand how precious you are, how beautiful your heart is, and how much happiness you bring into my life.</p>
+    <p>I don't know every detail of what the future holds, but I know what I hope for. I hope for more laughs, more late-night talks, more ordinary days together, more memories, and a thousand little moments where we keep choosing each other. I dream of the day I can hold your hand, look into your eyes, and call you my wife.</p>
+    <p>Until that day, and through every day that comes before it, I want to keep loving you with patience, honesty, respect, and all the tenderness in my heart. You never have to earn your place in my heart by being perfect. You are loved as you are.</p>
+    <p><strong>Thank you for being you. Thank you for being my favourite person. I love you, my princess — today, tomorrow, and in all the tomorrows I get. ❤️</strong></p>
+    <div class="signature">Forever your boy,<br>the one who will keep choosing you 💗</div>
+    <div style="font-size:2rem;margin-top:22px">💌 🧸 💞</div>
+    <button class="btn secondary" id="again" style="margin-top:24px">Read it again ↻</button>
+  </section>
+  <footer class="footer">Made with a whole lot of love, just for you. 💗<br><span class="small">A little reminder: you are so, so special.</span></footer>
 </main>
 <script>
-const env=document.getElementById('envelope'), letter=document.getElementById('letter'), hint=document.getElementById('hint');
-function openLetter(){env.classList.add('open');letter.classList.add('show');hint.textContent='A LITTLE PIECE OF MY HEART, JUST FOR YOU ♡';setTimeout(()=>letter.scrollIntoView({behavior:'smooth',block:'start'}),450)}
-env.addEventListener('click',openLetter);
-env.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter()}});
-document.getElementById('surpriseBtn').addEventListener('click',()=>{document.getElementById('surprise').classList.add('show');document.getElementById('surpriseBtn').textContent='I mean every word ♡';});
+const reasons = [
+"Because your smile can make an ordinary day feel beautiful.",
+"Because hearing your voice is one of my favourite comforts.",
+"Because your laugh is a sound I never get tired of.",
+"Because you make even the simplest moments feel special.",
+"Because I love the way your mind works.",
+"Because your little habits have become some of my favourite things.",
+"Because you can make me smile without even trying.",
+"Because I love hearing about the things that make you excited.",
+"Because you are wonderfully, unmistakably yourself.",
+"Because your presence makes the world feel a little softer.",
+"Because I love your sleepy, silly, and completely unfiltered moments.",
+"Because you make me look forward to tomorrow.",
+"Because I want to know every little story you have to tell.",
+"Because your happiness matters to me.",
+"Because I admire the way you keep going, even on difficult days.",
+"Because you have a heart worth appreciating.",
+"Because I love the little expressions you make.",
+"Because you make distance feel a little less powerful.",
+"Because even a simple message from you can brighten my day.",
+"Because I love how many different sides there are to you.",
+"Because you inspire me to become a kinder person.",
+"Because I want to celebrate your wins, big and small.",
+"Because I want to be someone you can talk to honestly.",
+"Because your dreams deserve to be heard and encouraged.",
+"Because I love your sense of humour.",
+"Because you make random conversations feel unforgettable.",
+"Because I care about the things you care about.",
+"Because I love discovering something new about you.",
+"Because you make my heart feel full in the quietest ways.",
+"Because I can imagine countless happy memories with you.",
+"Because you are beautiful in ways a mirror cannot show.",
+"Because I love the way you say the things only you say.",
+"Because your kindness leaves a mark.",
+"Because I want to learn how to understand you better.",
+"Because I love sharing little updates about my day with you.",
+"Because you make me believe in sweet, simple love.",
+"Because I want to cheer you on when you doubt yourself.",
+"Because your opinions matter to me.",
+"Because I love your excitement over little things.",
+"Because you are not replaceable or ordinary to me.",
+"Because I want to know what makes you feel safe and loved.",
+"Because I love the thought of making you laugh.",
+"Because you make affection feel meaningful.",
+"Because I want to be there for your quiet days too.",
+"Because I love the way you make memories feel important.",
+"Because you deserve gentleness, always.",
+"Because I admire your individuality.",
+"Because I love your little surprises.",
+"Because I want to keep learning your favourite things.",
+"Because you make my heart do its own silly little dance.",
+"Because I love when we can be playful together.",
+"Because you remind me that love lives in small gestures.",
+"Because I want to listen, not just reply.",
+"Because I care about how your day really went.",
+"Because I love seeing you proud of yourself.",
+"Because you make me want to put effort into us.",
+"Because I want to understand your silence without judging it.",
+"Because your feelings deserve patience and care.",
+"Because I love the person you are becoming.",
+"Because I want to make room for both your strength and softness.",
+"Because I love the way you make ordinary words feel special.",
+"Because you are my favourite person to make future plans with.",
+"Because I want to collect memories with you, not just photographs.",
+"Because I love how a small moment with you can stay in my mind all day.",
+"Because I want to know your hopes, fears, and little dreams.",
+"Because I appreciate the trust you share with me.",
+"Because you make me want to show up with a better heart.",
+"Because I love your unique way of looking at the world.",
+"Because I want to be proud of you out loud.",
+"Because I love imagining us laughing about old memories one day.",
+"Because you deserve to feel chosen, not taken for granted.",
+"Because I want to keep discovering new reasons to adore you.",
+"Because even our silly conversations mean something to me.",
+"Because I care about your comfort, not just my own wishes.",
+"Because I want to respect your boundaries and your pace.",
+"Because you make love feel like something worth nurturing.",
+"Because I love the little details that make you you.",
+"Because I want to be gentle with the parts of you that feel tender.",
+"Because I admire your courage in ways I may not say enough.",
+"Because I want to share both exciting news and boring updates with you.",
+"Because I love that we can create our own little world of memories.",
+"Because you make me grateful for the chance to know you.",
+"Because I want to keep making you feel appreciated.",
+"Because I love the thought of holding your hand through life's changes.",
+"Because your dreams make me curious about the future.",
+"Because I want to grow beside you, not hold you back.",
+"Because I love every laugh, every story, and every little hello.",
+"Because you are worthy of love on your best and hardest days.",
+"Because I want to keep choosing kindness when things get difficult.",
+"Because I love how special your smallest gestures can feel.",
+"Because you make me excited for all the memories we haven't made yet.",
+"Because I want to build something honest and lasting with you.",
+"Because I love you as a whole person, not an idea of perfection.",
+"Because your happiness is something I genuinely celebrate.",
+"Because I hope to turn our little dreams into shared memories.",
+"Because I want to keep finding new ways to make you feel loved.",
+"Because you are my favourite chapter in a story still being written.",
+"Because I feel lucky that our paths crossed.",
+"Because there is no list big enough to hold everything I love about you.",
+"Because, out of all the reasons, the simplest one is still the truest: I love you because you're you."
+];
+const sections=["opening","letter","reasons","promises","heartsSection","final"];
+function show(id){document.getElementById(id).classList.remove("hidden");setTimeout(()=>document.getElementById(id).scrollIntoView({behavior:"smooth",block:"start"}),80)}
+function go(next){show(next)}
+let revealed=0;
+function revealBatch(){const grid=document.getElementById("reasonGrid");const end=Math.min(revealed+10,100);for(let i=revealed;i<end;i++){const item=document.createElement("article");item.className="reason";item.innerHTML='<span class="num">'+(i+1)+'</span><p></p>';item.querySelector("p").textContent=reasons[i];grid.appendChild(item)}revealed=end;document.getElementById("progress").style.width=revealed+"%";document.getElementById("progressLabel").textContent=revealed+" of 100 reasons discovered";if(revealed===100){document.getElementById("revealBtn").textContent="All 100 reasons revealed 💗";document.getElementById("revealBtn").disabled=true;document.getElementById("toPromises").classList.remove("hidden")}else{document.getElementById("revealBtn").textContent="Reveal 10 more ✨"}}
+function openLetter(){document.getElementById("envelope").classList.add("open");setTimeout(()=>go("letter"),450)}
+document.getElementById("openBtn").addEventListener("click",openLetter);
+document.getElementById("envelope").addEventListener("click",openLetter);
+document.getElementById("toReasons").addEventListener("click",()=>go("reasons"));
+document.getElementById("revealBtn").addEventListener("click",revealBatch);
+document.getElementById("toPromises").addEventListener("click",()=>go("promises"));
+document.getElementById("toHearts").addEventListener("click",()=>go("heartsSection"));
+document.getElementById("toFinal").addEventListener("click",()=>go("final"));
+document.getElementById("again").addEventListener("click",()=>{document.getElementById("opening").scrollIntoView({behavior:"smooth"});});
+const heartMessages=["You are loved more than this little heart can hold. 💗","I hope you always feel safe being yourself with me. 🫶","Your smile is one of my favourite sights. 🌷","I am cheering for you, even in the little things. ✨","You never have to be perfect to be precious to me. 🤍","I hope I get to make you laugh today. 🧸","I am grateful for every moment we get to share. 💞","One day at a time, I want to keep building something beautiful with you. 💍"];
+const heartArea=document.getElementById("heartArea");heartMessages.forEach((msg,i)=>{const b=document.createElement("button");b.className="heart";b.textContent="♡";b.setAttribute("aria-label","Reveal hidden love note "+(i+1));b.addEventListener("click",()=>{b.textContent="💗";document.getElementById("heartMessage").textContent=msg});heartArea.appendChild(b)});
+const floaterBox=document.getElementById("floaters");const symbols=["♡","✿","💗","🦋"];for(let i=0;i<22;i++){const s=document.createElement("span");s.className="floater";s.textContent=symbols[i%symbols.length];s.style.left=(Math.random()*100)+"%";s.style.animationDuration=(12+Math.random()*17)+"s";s.style.animationDelay=(-Math.random()*25)+"s";s.style.fontSize=(14+Math.random()*18)+"px";floaterBox.appendChild(s)}
 </script>
 </body>
 </html>
